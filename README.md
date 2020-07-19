@@ -1,2 +1,2 @@
 # javascript-assignment
-Javascript essential by letsupgraade
+LetsUpgrade - Javascript Essentials
