@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="page"><h2>Hey!! Welcome to my page</h2></div> 
+    <script>
+
+        //set background colour
+        arr=["black","red","blue","green","voilet","yellow"];
+           var i=0;
+           var doc=document.getElementById("page");
+           function changeBackgrnd() {
+              
+           for(i=0;i<arr.length;i++)
+           {
+            document.body.style.backgroundColor=arr[i];
+           }
+           }
+
+           setInterval ( changeBackgrnd , 1000 );
+           
+
+
+    </script>
+</body>
+</html>
