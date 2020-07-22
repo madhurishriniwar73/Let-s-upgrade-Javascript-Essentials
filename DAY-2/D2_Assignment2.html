@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Day2 Assignment 2</title>
+
+</head>
+
+<body>
+   <script>
+
+       // String Methods
+       let str=" Madhuri"
+            let str2="Shriniwar"
+            
+            console.log("STRING OPERATIONS : ")
+            //Length
+            console.log("Length is : "+str.length)
+            
+            //Uppercase
+            console.log("UpperCase :"+str.toUpperCase())
+            
+            //Lowercase
+            console.log("UpperCase :"+str.toLowerCase())
+            
+            //Trim whitespaces
+            console.log("Trim      :"+str.trim())
+            
+            //Char at 4th position
+            console.log("CharAt    :"+str.charAt(4))
+            
+            //concatenation
+            console.log("Concat    :"+str.concat(str2))
+
+            //IndexOf
+            console.log("IndexOf   :"+str.indexOf('a'))
+
+            //Replace first occured char
+            console.log("Replace   :"+str.replace('i','ee'))
+
+            //Split
+            console.log("Split     :"+str.split('i'))
+
+            //Substring
+            console.log("Substring :"+str.substring(1,6))
+
+
+               
+            let arr=[1,4,[true,false],1234n,567890n,'rio','tokyo','spain']
+            let arr2=[44,'rome']
+            
+            console.log("\nARRAY OPERATIONS : ")
+            //IndexOf
+            console.log("IndexOf       :"+arr.indexOf(1))
+            
+            //Last Index Of
+            console.log("LastIndexOf   :"+arr.lastIndexOf('spain'))
+            
+            //Length
+            console.log("Length        :"+arr.length)
+
+            //sort
+            console.log("Sort          :"+arr.sort())
+
+            //Reverse Array
+            revarr=arr;
+            revarr=revarr.reverse()
+            console.log("Reverse Array :"+revarr)
+
+            //Concat
+            console.log("Concat        :"+arr.concat(arr2))
+
+            //Unshift 'raquel' (Push at start)
+            arr.unshift('raquel')
+            console.log("Unshift       :"+arr)
+            
+            //Shift (Pop from end)
+            arr.shift()
+            console.log("Shift         :"+arr)
+            
+            //Push 'professor'
+            arr.push('professor')
+            console.log("Push          :"+arr)
+            
+            //Pop 
+            arr.pop()
+            console.log("Pop           :"+arr)
+
+   </script>
+
+</body>
+
+</html>
