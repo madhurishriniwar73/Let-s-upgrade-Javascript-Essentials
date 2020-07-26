@@ -1,0 +1,92 @@
+﻿﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <title>question2</title><script>
+        class User {
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.lucoins = 0;
+                this.courses = [];
+
+            }
+
+            login() {
+                console.log(`${this.name}  has logged in`);
+                return this;
+
+            }
+            logout() {
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+        }
+            
+        class Moderator extends User {
+            constructor(name, age, email, role) {
+                super(name, age, email);
+                this.role = role;
+                
+            }
+            addcoins(user) {
+
+                this.lucoins++;
+                console.log(`${user.name} has ${this.lucoins} coins`);
+
+            }
+            subtractcoins(user) {
+                this.lucoins--;
+                console.log(`${user.name} has ${this.lucoins} coins`);
+            }
+
+        }       
+        class Admin extends Moderator {
+            addCourse(user, course) {
+                user.courses.push(course);
+                console.log(user);
+            }
+            deleteCourse(user,course) {
+                user.courses.pop(course);
+                console.log(user);
+                }
+                
+            }
+
+        
+
+        
+      
+        let user1 = new User(`tokyo`, 19, `tokyo@gmail.com`)
+        let user2 = new User(`berlin`, 21, `berlin@gmail.com`)
+        let mod = new Moderator(`raquel`, 24, `raquel@gmail.com`)
+        let admin= new Admin(`rio`,25,`rio@gmail.com`)
+        user2.login().logout()
+        user1.login().logout()
+       // let users = [user1, user2,mod,admin];
+      //  console.log(users);
+        console.log(" addcoins to user by moderator ");
+        mod.addcoins(user1);
+        mod.addcoins(user1); mod.addcoins(user1);
+        console.log(" subtract coins to user by moderator");
+        mod.subtractcoins(user1);
+        mod.subtractcoins(user1);
+        console.log("add subjects to user by moderator");
+        admin.addCourse(user1, 'javascript');
+        console.log(user1.courses);
+        admin.addCourse(user1, 'python');
+        console.log(user1.courses);
+        admin.addCourse(user1, 'clanguage');
+        console.log(user1.courses);
+
+            console.log("delete  subjects to user by moderator");
+        admin.deleteCourse(user1, 'clanguage'); console.log(user1.courses);
+    //    console.log(users);
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
